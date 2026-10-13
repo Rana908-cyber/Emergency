@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams - ERS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="plus-icon">+</span>
+                <h2>ERS</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="emergencies.html" class="nav-link">Emergencies</a>
+                <a href="teams.html" class="nav-link active">Teams</a>
+            </nav>
+            <div class="user-profile">
+                <div class="user-info">
+                    <strong>Rana</strong>
+                    <small>Admin</small>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div>
+                    <h1>Teams Management</h1>
+                    <p class="welcome-text">Manage response teams and availability</p>
+                </div>
+                <button class="btn btn-primary" id="openTeamModalBtn">+ Add Team</button>
+            </header>
+
+            <section class="card-section">
+                <h3>All Teams</h3>
+                <div class="teams-grid">
+                    <div class="team-card">
+                        <h4>Ambulance A</h4>
+                        <p>Medical · 4 members</p>
+                        <span class="status-indicator available">● Available</span>
+                        <div class="team-actions" style="margin-top: 15px;">
+                            <button class="btn-sm">Edit</button>
+                            <button class="btn-sm btn-danger">Delete</button>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <h4>Fire Unit 1</h4>
+                        <p>Fire · 6 members</p>
+                        <span class="status-indicator busy">● Busy</span>
+                        <div class="team-actions" style="margin-top: 15px;">
+                            <button class="btn-sm">Edit</button>
+                            <button class="btn-sm btn-danger">Delete</button>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <h4>Police Unit 7</h4>
+                        <p>Police · 3 members</p>
+                        <span class="status-indicator available">● Available</span>
+                        <div class="team-actions" style="margin-top: 15px;">
+                            <button class="btn-sm">Edit</button>
+                            <button class="btn-sm btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="teamModal">
+        <div class="modal-card">
+            <h2>Add Team</h2>
+            <form id="addTeamForm">
+                <div class="form-group">
+                    <label>Team Name</label>
+                    <input type="text" placeholder="Enter team name" required>
+                </div>
+                <div class="form-group">
+                    <label>Department</label>
+                    <select>
+                        <option value="Medical">Medical</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Police">Police</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Members Count</label>
+                    <input type="number" placeholder="Enter members count" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" id="closeTeamModalBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+        <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

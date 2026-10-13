@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergencies - ERS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="plus-icon">+</span>
+                <h2>ERS</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="emergencies.html" class="nav-link active">Emergencies</a>
+                <a href="teams.html" class="nav-link">Teams</a>
+            </nav>
+            <div class="user-profile">
+                <div class="user-info">
+                    <strong>Rana</strong>
+                    <small>Admin</small>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div>
+                    <h1>Emergencies Management</h1>
+                    <p class="welcome-text">Manage and track all reported emergencies</p>
+                </div>
+                <button class="btn btn-primary" id="openModalBtn">+ Add Emergency</button>
+            </header>
+
+            <section class="card-section">
+                <h3>All Emergencies</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>EMERGENCY</th>
+                            <th>LOCATION</th>
+                            <th>SEVERITY</th>
+                            <th>TEAM</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Car accident</strong>
+                                <span class="badge medical">Medical</span>
+                            </td>
+                            <td>Downtown St.</td>
+                            <td>High</td>
+                            <td>Ambulance A</td>
+                            <td class="actions">
+                                <button class="btn-sm">Assign</button>
+                                <button class="btn-sm">Edit</button>
+                                <button class="btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Kitchen fire</strong>
+                                <span class="badge fire">Fire</span>
+                            </td>
+                            <td>El-Tahrir Sq.</td>
+                            <td>Critical</td>
+                            <td>Fire Unit 1</td>
+                            <td class="actions">
+                                <button class="btn-sm">Assign</button>
+                                <button class="btn-sm">Edit</button>
+                                <button class="btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Street theft</strong>
+                                <span class="badge police">Police</span>
+                            </td>
+                            <td>Zamalek</td>
+                            <td>Medium</td>
+                            <td>—</td>
+                            <td class="actions">
+                                <button class="btn-sm">Assign</button>
+                                <button class="btn-sm">Edit</button>
+                                <button class="btn-sm btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="emergencyModal">
+        <div class="modal-card">
+            <h2>Add Emergency</h2>
+            <form id="addEmergencyForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" placeholder="Enter title" required>
+                </div>
+                <div class="form-group">
+                    <label>Type</label>
+                    <select>
+                        <option value="Medical">Medical</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Police">Police</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="Enter location" required>
+                </div>
+                <div class="form-group">
+                    <label>Severity</label>
+                    <select>
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                        <option value="Critical">Critical</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" id="closeModalBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
