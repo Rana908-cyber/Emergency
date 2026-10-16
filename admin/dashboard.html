@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - ERS</title>
-    <link rel="stylesheet" href="../assets/css/Admin/style.css">
-    <link rel="stylesheet" href="../assets/css/Admin/dashboard.css">
+    <title>Admin Dashboard | ERS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
 </head>
 
 <body>
@@ -14,26 +14,39 @@
         <aside class="sidebar">
             <div class="logo">
                 <span class="plus-icon">+</span>
-                <h2>ERS</h2>
+                <h1>ERS</h1>
             </div>
             <nav class="nav-menu">
                 <a href="dashboard.html" class="nav-link active">Dashboard</a>
                 <a href="emergencies.html" class="nav-link">Emergencies</a>
                 <a href="teams.html" class="nav-link">Teams</a>
             </nav>
-            <div class="user-profile">
-                <div class="user-info">
-                    <strong>Rana</strong>
-                    <small>Admin</small>
-                </div>
-                <button class="logout-btn">Logout</button>
+        <div class="user-profile" id="openProfileBtn" style="cursor: pointer;">
+            <div class="user-info">
+                <strong>Rana Mohamed</strong>
+                <small>Admin</small>
+            </div>
+                <button class="logout-btn"><a href="../login.html">Logout</a></button>
             </div>
         </aside>
-
+    <div class="modal-overlay" id="profileModal">
+      <div class="modal-card">
+        <h2>Profile</h2>
+        <div style="margin: 20px 0; text-align: left;">
+            <p><strong>Full Name:</strong> Rana Mohamed</p>
+            <p><strong>Email:</strong> rana@gmail.com</p>
+            <p><strong>Role:</strong> Admin</p>
+            <p><strong>Status:</strong> Active</p>
+        </div>
+        <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" id="closeProfileBtn">Close</button>
+        </div>
+    </div>
+</div>
         <main class="main-content">
             <header class="top-header">
                 <div>
-                    <h1>Admin Dashboard</h1>
+                    <h2>Admin Dashboard</h2>
                     <p class="welcome-text">Welcome back, Rana</p>
                 </div>
                 <button class="btn btn-primary" id="openModalBtn">+ Add Emergency</button>
@@ -72,8 +85,8 @@
                             </td>
                             <td>Ambulance A</td>
                             <td class="actions">
-                                <button class="btn-sm">Assign</button>
-                                <button class="btn-sm">Edit</button>
+                                <button class="btn-sm btn-ass">Assign</button>
+                                <button class="btn-sm btn-ed">Edit</button>
                                 <button class="btn-sm btn-danger">Delete</button>
                             </td>
                         </tr>
@@ -84,8 +97,8 @@
                             </td>
                             <td>Fire Unit 1</td>
                             <td class="actions">
-                                <button class="btn-sm">Assign</button>
-                                <button class="btn-sm">Edit</button>
+                                <button class="btn-sm btn-ass">Assign</button>
+                                <button class="btn-sm btn-ed">Edit</button>
                                 <button class="btn-sm btn-danger">Delete</button>
                             </td>
                         </tr>
@@ -96,8 +109,8 @@
                             </td>
                             <td>—</td>
                             <td class="actions">
-                                <button class="btn-sm">Assign</button>
-                                <button class="btn-sm">Edit</button>
+                                <button class="btn-sm btn-ass">Assign</button>
+                                <button class="btn-sm btn-ed">Edit</button>
                                 <button class="btn-sm btn-danger">Delete</button>
                             </td>
                         </tr>
@@ -133,8 +146,8 @@
             <h2>Add Emergency</h2>
             <form id="addEmergencyForm">
                 <div class="form-group">
-                    <label>Title</label>
-                    <input type="text" placeholder="Enter title" required>
+                    <label for="title">Title</label>
+                    <input id="title" type="text" placeholder="Enter title" required>
                 </div>
                 <div class="form-group">
                     <label>Type</label>
@@ -158,8 +171,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Notes</label>
-                    <textarea rows="3"></textarea>
+                    <label for="text">Notes</label>
+                    <textarea rows="3" id="text"></textarea>
                 </div>
                 <div class="modal-actions">
                     <button type="submit" class="btn btn-primary">Save</button>
@@ -168,6 +181,8 @@
             </form>
         </div>
     </div>
+
+    
 
     <script src="../assets/js/main.js"></script>
 </body>

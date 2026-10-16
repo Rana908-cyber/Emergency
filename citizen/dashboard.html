@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Dashboard | ERS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="logo">
+                    <span class="plus-icon">+</span>
+                    <h1>ERS</h1>
+                </div>
+                <nav class="nav-menu">
+                    <a href="dashboard.html" class="nav-link active">My Dashboard</a>
+                </nav>
+            </div>
+           <div class="user-profile" id="openProfileBtn" style="cursor: pointer;">
+          <div class="user-info">
+          <strong>Roaa Mohamed</strong>
+           <small>Citizen</small>
+    </div>
+    <button class="logout-btn"><a href="../login.html">Logout</a></button>
+          </div>
+        </aside>
+
+        <div class="modal-overlay" id="profileModal">
+            <div class="modal-card">
+                <h2>Profile</h2>
+                <div style="margin: 20px 0; text-align: left;">
+                    <p><strong>Full Name:</strong> Roaa Mohamed </p>
+                    <p><strong>Email:</strong> rana@gmail.com</p>
+                    <p><strong>Role:</strong>Citizen </p>
+                    <p><strong>Status:</strong> Active</p>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="closeProfileBtn">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div>
+                    <h2>My Emergency</h2>
+                    <p class="welcome-text">Your Submitted Emergency !</p>
+                </div>
+                <button class="btn btn-primary" id="openModalBtn">+ Report Emergency</button>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Total Reported</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number text-success">1</span>
+                    <span class="stat-label">Resolved</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" style="color: var(--warning-yellow);">1</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </section>
+
+            <section class="card-section">
+                <h3>My History</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>EMERGENCY</th>
+                            <th>LOCATION</th>
+                            <th>SEVERITY</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Car accident</strong><br>
+                                <span class="badge">Medical</span>
+                            </td>
+                            <td>Main Road, Street 5</td>
+                            <td><span>High</span></td>
+                            <td><span class="status-indicator busy">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Gas Odor</strong><br>
+                                <span class="badge">Fire</span>
+                            </td>
+                            <td>Building 10, Apt 2</td>
+                            <td><span>Medium</span></td>
+                            <td><span class="status-indicator available">Resolved</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="emergencyModal">
+        <div class="modal-card">
+            <h2>Report Emergency</h2>
+            <form id="addEmergencyForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Enter emergency title" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type">
+                        <option value="Medical">Medical</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Police">Police</option>
+                        <option value="Rescue">Rescue</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter full address" required>
+                </div>
+                <div class="form-group">
+                    <label for="severity">Severity</label>
+                    <select id="severity">
+                        <option value="Low">Low</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" rows="2" placeholder="Additional details..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" class="btn btn-primary">Submit Report</button>
+                    <button type="button" class="btn btn-secondary" id="closeModalBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

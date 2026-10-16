@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teams - ERS</title>
-    <link rel="stylesheet" href="../assets/css/Admin/style.css">
-    <link rel="stylesheet" href="../assets/css/Admin/dashboard.css">
+    <title>Teams | ERS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
 </head>
 
 <body>
@@ -14,26 +14,39 @@
         <aside class="sidebar">
             <div class="logo">
                 <span class="plus-icon">+</span>
-                <h2>ERS</h2>
+                <h1>ERS</h1>
             </div>
             <nav class="nav-menu">
                 <a href="dashboard.html" class="nav-link">Dashboard</a>
                 <a href="emergencies.html" class="nav-link">Emergencies</a>
                 <a href="teams.html" class="nav-link active">Teams</a>
             </nav>
-            <div class="user-profile">
+            <div class="user-profile" id="openProfileBtn" style="cursor: pointer;">
                 <div class="user-info">
-                    <strong>Rana</strong>
+                    <strong>Rana Mohamed</strong>
                     <small>Admin</small>
                 </div>
-                <button class="logout-btn">Logout</button>
+                <button class="logout-btn"><a href="../login.html">Logout</a></button>
             </div>
-        </aside>
-
+            </aside>
+            <div class="modal-overlay" id="profileModal">
+                <div class="modal-card">
+                    <h2>Profile</h2>
+                    <div style="margin: 20px 0; text-align: left;">
+                        <p><strong>Full Name:</strong> Rana Mohamed</p>
+                        <p><strong>Email:</strong> rana@gmail.com</p>
+                        <p><strong>Role:</strong> Admin</p>
+                        <p><strong>Status:</strong> Active</p>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="closeProfileBtn">Close</button>
+                    </div>
+                </div>
+            </div>
         <main class="main-content">
             <header class="top-header">
                 <div>
-                    <h1>Teams Management</h1>
+                    <h2>Teams Management</h2>
                     <p class="welcome-text">Manage response teams and availability</p>
                 </div>
                 <button class="btn btn-primary" id="openTeamModalBtn">+ Add Team</button>
@@ -47,7 +60,7 @@
                         <p>Medical · 4 members</p>
                         <span class="status-indicator available">● Available</span>
                         <div class="team-actions" style="margin-top: 15px;">
-                            <button class="btn-sm">Edit</button>
+                            <button class="btn-sm btn-ed">Edit</button>
                             <button class="btn-sm btn-danger">Delete</button>
                         </div>
                     </div>
@@ -56,7 +69,7 @@
                         <p>Fire · 6 members</p>
                         <span class="status-indicator busy">● Busy</span>
                         <div class="team-actions" style="margin-top: 15px;">
-                            <button class="btn-sm">Edit</button>
+                            <button class="btn-sm btn-ed">Edit</button>
                             <button class="btn-sm btn-danger">Delete</button>
                         </div>
                     </div>
@@ -65,7 +78,7 @@
                         <p>Police · 3 members</p>
                         <span class="status-indicator available">● Available</span>
                         <div class="team-actions" style="margin-top: 15px;">
-                            <button class="btn-sm">Edit</button>
+                            <button class="btn-sm btn-ed">Edit</button>
                             <button class="btn-sm btn-danger">Delete</button>
                         </div>
                     </div>

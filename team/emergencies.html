@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Emergencies | ERS</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="logo">
+                    <span class="plus-icon">+</span>
+                    <h2>ERS</h2>
+                </div>
+                <nav class="nav-menu">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="emergencies.html" class="nav-link active">All Emergencies</a>
+                </nav>
+            </div>
+
+            <div class="user-profile">
+                <div class="user-info">
+                    <strong>Team Leader</strong>
+                    <small>Leader</small>
+                </div>
+                <button class="logout-btn"><a href="../login.html">Logout</a></button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div>
+                    <h1>All Emergencies</h1>
+                    <p class="welcome-text">Full history of assigned, accepted, and resolved cases</p>
+                </div>
+            </header>
+
+            <section class="card-section">
+                <h3>Emergency Records History</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>EMERGENCY</th>
+                            <th>LOCATION</th>
+                            <th>SEVERITY</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Car accident</strong>
+                                <span class="badge">Medical</span>
+                            </td>
+                            <td>Main Road, Street 5</td>
+                            <td>High</td>
+                            <td><span class="status-indicator busy">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Building Fire</strong>
+                                <span class="badge">Fire</span>
+                            </td>
+                            <td>Industrial Zone, Gate 2</td>
+                            <td>Critical</td>
+                            <td><span class="status-indicator busy">Accepted</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Kitchen fire</strong>
+                                <span class="badge">Fire</span>
+                            </td>
+                            <td>Building 12, District 3</td>
+                            <td>Medium</td>
+                            <td><span class="status-indicator available">Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Gas Leakage</strong>
+                                <span class="badge">Fire</span>
+                            </td>
+                            <td>Block 4, Apt 12</td>
+                            <td>Low</td>
+                            <td><span class="status-indicator available">Done</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+<script src="../assets/js/main.js"></script>
+</body>
+
+</html>
