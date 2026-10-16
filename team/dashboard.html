@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team Dashboard | Emergency</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+    body { background: #f4f6f9; display: flex; min-height: 100vh; }
+
+    .sidebar { width: 220px; background: #1e293b; color: #fff; padding: 20px; }
+    .sidebar h2 { margin-bottom: 24px; font-size: 20px; }
+    .sidebar a { display: block; color: #cbd5e1; text-decoration: none; padding: 10px; border-radius: 6px; margin-bottom: 6px; }
+    .sidebar a:hover, .sidebar a.active { background: #334155; color: #fff; }
+
+    .main { flex: 1; padding: 30px; }
+    .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .top h1 { font-size: 24px; color: #1e293b; }
+
+    .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1); margin-bottom: 20px; }
+    .card h3 { margin-bottom: 12px; color: #1e293b; }
+
+    .btn { border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; color: #fff; font-size: 14px; background: #2563eb; }
+    .btn:hover { background: #1d4ed8; }
+
+    label { display: block; margin: 10px 0 4px; font-size: 14px; color: #334155; }
+    select, input { width: 100%; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+    <h2>Team Panel</h2>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="assign-team.html">Assign Team</a>
+</aside>
+
+<main class="main">
+    <div class="top">
+        <h1>Team Dashboard & Assignments</h1>
+    </div>
+
+    <div class="card">
+        <h3>Assign Emergency Task to Team</h3>
+        <label>Select Emergency Case</label>
+        <select id="emergencyCase">
+            <option>Fire Outbreak - Street 9</option>
+            <option>Car Accident - Main Road</option>
+            <option>Medical Emergency - Building 4</option>
+        </select>
+
+        <label>Assign Available Team</label>
+        <select id="assignTeamSelect">
+            <option>Ambulance Team 1</option>
+            <option>Fire Team 1</option>
+        </select>
+
+        <button class="btn" onclick="assignTask()">Confirm Assignment</button>
+    </div>
+</main>
+
+<script>
+    function assignTask() {
+        alert("Team assigned successfully to the emergency case!");
+    }
+</script>
+</body>
+</html>
